@@ -27,7 +27,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3 # add specifier for commit SHA & test at @v4
     - name: Load Secrets
-      uses: 1password/load-secrets-from-1password@v1
+      uses: 1password/load-secrets-action@v1
       with:
         # Export loaded secrets as environment variables
         export-env: true
