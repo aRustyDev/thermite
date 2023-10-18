@@ -10,13 +10,92 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
+  build-bin:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3 # add specifier for commit SHA & test at @v4
-    - name: Build
+    # Needs: Scan for secrets
+    #        - https://github.com/marketplace/actions/trufflehog-oss
+    # Needs: Vault https://github.com/marketplace/actions/vault-secrets
+    # Needs: Run on different Archs https://github.com/marketplace/actions/run-on-architecture
+    # Needs: https://github.com/marketplace/actions/gittools
+    # Needs: https://github.com/marketplace/actions/import-code-signing-certificates
+    # Needs: https://github.com/marketplace/actions/delete-artifact
+    # Needs: https://github.com/marketplace/actions/cargo-install
+    # Needs: https://github.com/marketplace/actions/set-up-a-rust-toolchain
+    - name: Checkout
+      uses: actions/checkout@v3 # add specifier for commit SHA & test at @v4
+    - name: Load Secrets
+      uses: 1password/load-secrets-from-1password@v1
+      with:
+        # Export loaded secrets as environment variables
+        export-env: true
+      env:
+        OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+        SECRET_HELLO: op://GitHub-Actions/HelloWorld/password
+        API_TOKEN_GG: op://GitHub-Actions/gitguardian/credential
+    - name: GitGuardian scan
+      uses: GitGuardian/ggshield-action@v1.20.0
+      env:
+        GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
+        GITHUB_PUSH_BASE_SHA: ${{ github.event.base }}
+        GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        GITGUARDIAN_API_KEY: $API_TOKEN_GG
+    - name: Cargo Audit
+      uses: actions-rs/audit-check@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create Issues from Advisories
+      uses: olix0r/rustsecbot@v1
+      with:
+        labels: area/myapp,rust,security
+    - name: Cargo binstall
+      uses: cargo-bins/cargo-binstall@main
+    - name: Cargo Build
       run: cargo build --verbose
-    - name: Run tests
+    - name: Cargo Test
       run: cargo test --verbose
+  # Job:Release https://github.com/marketplace/actions/gh-release
+  # - Depends on Build
+  # Job:Benchmarking
+  # - https://github.com/marketplace/actions/cargo-bloat
+  # - https://github.com/marketplace/actions/bencher-cli
+  # - name: ZAP Scan
+  #   uses: zaproxy/action-full-scan@v0.7.0
+  #   with:
+  #     target: 'https://www.zaproxy.org/'
+  # Job:Push Container
+  # - Depends on Release
+  # - Send Notifications
+  # - https://github.com/marketplace/actions/build-and-push-docker-images
+  # - https://github.com/marketplace/actions/download-workflow-artifact
+  # - https://github.com/marketplace/actions/aqua-security-trivy
+  # - https://github.com/marketplace/actions/action-slack
+  # - https://github.com/marketplace/actions/docker-layer-caching
+  # - https://github.com/marketplace/actions/kaniko-builder
+  # - https://github.com/marketplace/actions/actions-for-discord
+  # - https://github.com/marketplace/actions/jetstack-paranoia
+  # Job: End 2 End Testing
+  # - https://github.com/marketplace/actions/kind-cluster
+  # Job:Helm Chart Update
+  # - https://github.com/marketplace/actions/helm-chart-releaser
+  # - https://github.com/marketplace/actions/helm-chart-testing
+  # - https://github.com/marketplace/actions/deliverybot-helm-action
+  # Job:Merge Main
+  # - Depends on Build
+  # - Auto-lint
+  # - Verify CoSign https://github.com/marketplace/actions/cosign-installer
+  # - verify/update changelog
+  # - https://github.com/marketplace/actions/changed-files
+  # - https://github.com/marketplace/actions/markdown-link-check
+  # - https://github.com/marketplace/actions/git-semantic-version
+  # - https://github.com/marketplace/actions/hyperlink-link-checker
+  # - https://github.com/marketplace/actions/get-a-changelog-between-two-references
+  # - https://github.com/marketplace/actions/git-version
+  # - https://github.com/marketplace/actions/find-and-replace
+  # - https://github.com/marketplace/actions/rust-grcov
+  # - https://github.com/marketplace/actions/rust-marker-linter
+  # - https://github.com/marketplace/actions/yaml-update-action
+  # Job:Packer Build
+  # - https://github.com/marketplace/actions/setup-hashicorp-packer
