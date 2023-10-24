@@ -1,0 +1,80 @@
+# Workflows
+
+## TODOs
+
+- [ ] Autodocumentation
+  - [ ] `man` contribution
+  - [ ] `tldr` contribution
+  - [ ] `gitbook` updates
+  - [ ] `readthedoc` updates
+  - [ ] `crate` updates
+- [ ] Building
+- [ ] Testing
+  - [ ] SAST
+  - [ ] DAST
+  - [ ] Fuzzing
+  - [ ] Linting
+  - [ ] Benchmarking
+  - [ ] Profiling
+  - [ ] E2E
+  - [ ] Unit Tests
+  - [ ] Coverage Tests
+  - [ ] Container Vuln Scanning
+  - [ ] Arch Tests
+    - [ ] x86_64
+    - [ ] x86_32
+    - [ ] x64
+    - [ ] x32
+    - [ ] i386 (32-bit Intel)
+    - [ ] AArch64
+    - [ ] AArch32 
+    - [ ] ARM 32 Bit (Cortex)
+    - [ ] ARM 32 Bit (Legacy)
+    - [ ] Apple_ARM
+    - [ ] RISCV
+    - [ ] PPC64
+    - [ ] PPC
+    - [ ] S390
+    - [ ] S390X
+    - [ ] MIPS
+    - [ ] MIPSEL
+    - [ ] ia32
+  - [ ] OS Tests
+    - [ ] aix
+    - [ ] darwin (osx)
+    - [ ] freebsd
+    - [ ] linux
+    - [ ] openbsd
+    - [ ] sunos
+    - [ ] win32
+- [ ] Auditing
+  - [ ] Check Signatures
+  - [ ] Check Dependencies
+  - [ ] Scan for Secrets
+- [ ] Pre-Release
+  - [ ] Check for passing Tests
+    - [ ] Only Benchmarking & Profiling may fail; failures require review and approval
+  - [ ] Package & Sign SBOM
+  - [ ] Build App
+  - [ ] Build Container
+  - [ ] Build Helm Chart
+  - [ ] Update Changelog
+  - [ ] Determine SEMVER
+- [ ] Release
+  - [ ] Verify Changelog
+  - [ ] app-os-arch-ver
+  - [ ] push container
+  - [ ] push helm chart
+- [ ] Merging/PR (Non-Main)
+  - [ ] Linting
+  - [ ] Rebase Recommendations
+  - [ ] Secret Scanning
+  - [ ] Update Changelog
+- [ ] Merging/PR (Main)
+  - [ ] Linting
+  - [ ] Rebase Recommendations
+  - [ ] Secret Scanning
+  - [ ] Unit testing
+  - [ ] E2E Testing
+  - [ ] Coverage Testing
+  - [ ] Update Changelog

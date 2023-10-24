@@ -1,0 +1,436 @@
+---
+casks:
+  - name: 1password
+    version: 8.10.18
+    description: Password manager
+    docsurl: https://1password.com/
+  - name: pandoc
+    version: latest
+    description: universal document converter
+    docsurl: https://pandoc.org/
+  - name: docker
+    version: latest
+    description: container platform
+    docsurl: https://www.docker.com/
+  - name: firefox
+    version: latest
+    description: web browser
+    docsurl: https://www.mozilla.org/en-US/firefox/new/
+  - name: google-chrome
+    version: latest
+    description: web browser
+    docsurl: https://www.google.com/chrome/
+  - name: slack
+    version: latest
+    description: team communication
+    docsurl: https://slack.com/
+  - name: spotify
+    version: latest
+    description: music streaming
+    docsurl: https://www.spotify.com/
+  - name: visual-studio-code
+    version: latest
+    description: code editor
+    docsurl: https://code.visualstudio.com/
+  - name: zellij
+    version: latest
+    description: terminal multiplexer
+    docsurl: https://zellij.dev/
+  - name: starship
+    version: latest
+    description: shell prompt
+    docsurl: https://starship.rs/
+  - name: nushell
+    version: latest
+    description: shell
+    docsurl: https://www.nushell.sh/
+  - name: helix
+    version: latest
+    description: a post-modern modal text editor
+    docsurl: https://helix-editor.com/
+  - name: awscli
+    version: latest
+    description: aws cli
+    docsurl: https://aws.amazon.com/cli/
+  - name: terraform
+    version: latest
+    description: infrastructure as code
+    docsurl: https://www.terraform.io/
+  - name: packer
+    version: latest
+    description: build machine images
+    docsurl: https://www.packer.io/
+  - name: vault
+    version: latest
+    description: secrets management
+    docsurl: https://www.vaultproject.io/
+  - name: google-cloud-sdk
+    version: latest
+    description: google cloud sdk
+    docsurl: https://cloud.google.com/sdk
+  - name: kubectl
+    version: latest
+    description: kubernetes cli
+    docsurl: https://kubernetes.io/docs/reference/kubectl/overview/
+  - name: helm
+    version: latest
+    description: kubernetes package manager
+    docsurl: https://helm.sh/
+  - name: minikube
+    version: latest
+    description: kubernetes local development
+    docsurl: https://minikube.sigs.k8s.io/docs/
+  - name: kind
+    version: latest
+    description: kubernetes in docker
+    docsurl: https://kind.sigs.k8s.io/
+  - name: k9s
+    version: latest
+    description: kubernetes cli
+    docsurl: https://k9scli.io/
+  - name: kubectx
+    version: latest
+    description: kubernetes context switcher
+    docsurl:
+  - name: kubens
+    version: latest
+    description: kubernetes namespace switcher
+    docsurl:
+  - name: kubeseal
+    version: latest
+    description: kubernetes secrets encryption
+    docsurl:
+  - name: kustomize
+    version: latest
+    description: kubernetes configuration management
+    docsurl: https://kustomize.io/
+  - name: krew
+    version: latest
+    description: kubernetes plugin manager
+    docsurl: https://krew.sigs.k8s.io/
+  - name: librewolf
+    version: latest
+    description: web browser
+    docsurl: https://librewolf-community.gitlab.io/
+  - name: mullvad-browser
+    version: latest
+    description: web browser
+    docsurl: https://mullvad.net/en/download/
+  - name: vyprvpn
+    version: latest
+    description: vpn
+    docsurl: https://www.vyprvpn.com/
+  - name: zero-tier-one
+    version: latest
+    description: vpn
+    docsurl: https://www.zerotier.com/
+  - name: obsidian
+    version: latest
+    description: note taking
+    docsurl: https://obsidian.md/
+  - name: todoist
+    version: latest
+    description: task management
+    docsurl: https://todoist.com/
+  - name: cilium-cli
+    version: latest
+    description: kubernetes networking
+    docsurl: https://cilium.io/
+  - name: joplin-cli
+    version: latest
+    description: note taking
+    docsurl: https://joplinapp.org/
+  - name: joplin-desktop
+    version: latest
+    description: note taking
+    docsurl: https://joplinapp.org/
+  - name: kubescape
+    version: latest
+    description: kubernetes security
+    docsurl:
+  - name: kubectl-debug
+    version: latest
+    description: kubernetes debugging
+    docsurl:
+  - name: kwok
+    version: latest
+    description: Kubernetes WithOut Kubelet, enables setting up a cluster of thousands of Nodes in seconds
+    docsurl: https://kwok.sigs.k8s.io/
+  - name: kytea
+    version: latest
+    description: a general toolkit developed for analyzing text, with a focus on Japanese, Chinese and other languages requiring word or morpheme segmentation
+    docsurl: https://www.phontron.com/kytea/
+  - name: kubefwd
+    version: latest
+    description: bulk port forwarding kubernetes services for local development
+    docsurl: https://kubefwd.com/
+  - name: kustomizer
+    version: latest
+    description: kubernetes configuration management
+    docsurl: https://kustomizer.dev/
+  - name: kubecolor
+    version: latest
+    description: colorizes kubectl output
+    docsurl: https://github.com/hidetatz/kubecolor
+  - name: kubesess
+    version: latest
+    description: session management tool for kubectl
+    docsurl: https://github.com/Ramilito/kubesess
+  - name: kubetop
+    version: latest
+    description: top for kubernetes
+    docsurl:
+  - name: kuttl
+    version: latest
+    description: kubernetes test tool
+    docsurl: https://kuttl.dev/
+  - name: trufflehog
+    version: latest
+    description: searches through git repositories for secrets, digging deep into commit history and branches
+    docsurl: https://github.com/trufflesecurity/trufflehog
+  - name: cointop
+    version: latest
+    description: interactive terminal based UI application for tracking cryptocurrencies
+    docsurl: https://cointop.sh/
+  - name: emojify
+    version: latest
+    description: Emoji on the command line 😱
+    docsurl: https://github.com/mrowa44/emojify
+  - name: kondo
+    version: latest
+    description: Cleans dependencies and build artifacts from your projects
+    docsurl: https://github.com/tbillington/kondo
+  - name: thefuck
+    version: latest
+    description: Programmatically correct mistyped console commands
+    docsurl: https://github.com/nvbn/thefuck
+  - name: just
+    version: latest
+    description: Handy way to save and run project-specific commands
+    docsurl: https://github.com/casey/just
+  - name: tmate
+    version: latest
+    description: Instant terminal sharing
+    docsurl: https://tmate.io/
+  - name: glow
+    version: latest
+    description: markdown in the cli
+    docsurl: https://github.com/charmbracelet/glow
+  - name: lazydocker
+    version: latest
+    description: interactive docker cli
+    docsurl: https://github.com/jesseduffield/lazydocker
+  - n`ame: just
+    version: latest
+    description: Handy way to save and run project-specific commands
+    docsurl: https://github.com/casey/just
+  - name: tmate
+    version: latest
+    description: Instant terminal sharing
+    docsurl: https://tmate.io/
+  - name: glow
+    version: latest
+    description: markdown in the cli
+    docsurl: https://github.com/charmbracelet/glow
+  - name: lazydocker
+    version: latest
+    description: interactive docker cli
+    docsurl: https://github.com/jesseduffield/lazydocker
+  - name: ag
+    version: latest
+    docsurl: https://github.com/ggreer/the_silver_searcher
+  - name: asciinema
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/asciinema
+  - name: atuin
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/atuin
+  - name: bat
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/bat
+  - name: bettercap
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/bettercap
+  - name: binutils
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/binutils
+  - name: binwalk
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/binwalk
+  - name: bingrep
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/bingrep
+  - name: bitchx
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/bitchx
+  - name: bbot
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/bbot
+  - name: bsdiff
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/bsdiff
+  - name: btm
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/btm
+  - name: btop
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/btop
+  - name: bottom
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/bottom
+  - name: broot
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/broot
+  - name: lsd
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/lsd
+  - name: plocate
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/plocate
+  - name: capstone
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/capstone
+  - name: cheat
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/cheat
+  - name: choose
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/choose
+  - name: croc
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/croc
+  - name: curlie
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/curlie
+  - name: cw
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/cw
+  - name: delta
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/delta
+  - name: difftastic
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/difftastic
+  - name: dive
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/dive
+  - name: dog
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/dog
+  - name: drill
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/drill
+  - name: duf
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/duf
+  - name: dust
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/dust
+  - name: entr
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/entr
+  - name: exa
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/exa
+  - name: fd
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/fd
+  - name: fq
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/fq
+  - name: fzf
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/fzf
+  - name: git-crypt
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/git-crypt
+  - name: gitoxide
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/gitoxide
+  - name: glances
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/glances
+  - name: gocryptfs
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/gocryptfs
+  - name: gping
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/gping
+  - name: gtop
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/gtop
+  - name: helm
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/helm
+  - name: helmify
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/helmify
+  - name: hexyl
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/hexyl
+  - name: htmlq
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/htmlq
+  - name: hyperfine
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/hyperfine
+  - name: jq
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/jq
+  - name: jql
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/jql
+  - name: magic
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/magic
+  - name: mcfly
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/mcfly
+  - name: mtr
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/mtr
+  - name: pgcli
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/pgcli
+  - name: procs
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/procs
+  - name: psst
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/psst
+  - name: ratatui
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/ratatui
+  - name: ripgrep
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/ripgrep
+  - name: rustcat
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/rustcat
+  - name: scc
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/scc
+  - name: sd
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/sd
+  - name: tldr
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/tldr
+  - name: tokei
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/tokei
+  - name: xh
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/xh
+  - name: xxd
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/xxd
+  - name: yq
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/yq
+  - name: zenith
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/zenith
+  - name: zoxide
+    version: latest
+    docsurl: https://formulae.brew.sh/cask/zoxide
