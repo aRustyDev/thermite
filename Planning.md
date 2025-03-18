@@ -9,6 +9,8 @@
   - stretch: make it remote
 - Symbol Table inference
 
+https://docs.rust-embedded.org/embedonomicon/dma.html
+
 # Architecture
 - Databases
   - Persistent
